@@ -1,0 +1,9 @@
+.Tilt {
+	background: linear-gradient(to left, rgba(187, 119, 153, .8) 0%, rgba(187, 119, 153, .8) 100%);
+}
+
+.image-size {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
