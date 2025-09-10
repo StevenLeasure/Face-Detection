@@ -138,7 +138,7 @@ onButtonSubmit = () => {
     this.setState(Object.assign(this.state.user, { entries: count }));
     
     // Now call Clarifai through your backend
-    return fetch('http://localhost:3001/api/clarifai', {
+    return fetch('https://face-detection-backend-o3m5.onrender.com/api/clarifai', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
