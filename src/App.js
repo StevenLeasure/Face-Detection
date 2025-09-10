@@ -126,7 +126,7 @@ onButtonSubmit = () => {
   this.setState({ imageUrl: this.state.input });
 
   // First update user entries
-  fetch('http://localhost:3001/image', {
+  fetch('https://face-detection-backend-o3m5.onrender.com/image', {
     method: 'put',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
