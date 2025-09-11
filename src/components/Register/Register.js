@@ -29,13 +29,26 @@ import React from 'react';
 				name: this.state.name
 			})
 		})
-			.then(response => response.json())
+			.then(response => {
+			    if (!response.ok) {
+			      // If response is not OK (400, 500, etc.), read the error message
+			      return response.json().then(errorData => {
+			        throw new Error(errorData.error || 'Registration failed');
+			      });
+			    }
+			    return response.json();
+			  })
 			.then(user => {
 				if (user.id) {
 					this.props.loadUser(user)
 					this.props.onRouteChange('home');
 				}
 			})
+			.catch(error => {
+			    console.error('Registration error:', error.message);
+			    // You might want to show this error to the user
+			    alert('Registration failed: ' + error.message);
+			}0;
 	}
  	render () {
 	 	return(
