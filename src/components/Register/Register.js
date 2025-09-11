@@ -48,7 +48,7 @@ import React from 'react';
 			    console.error('Registration error:', error.message);
 			    // You might want to show this error to the user
 			    alert('Registration failed: ' + error.message);
-			}0;
+			});
 	}
  	render () {
 	 	return(
