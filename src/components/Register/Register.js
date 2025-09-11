@@ -20,7 +20,7 @@ import React from 'react';
 		this.setState({password: event.target.value})
 	}
 	onSubmitSignIn = () => {
-		fetch('http://localhost:3001/register', {
+		fetch('https://face-detection-backend-o3m5.onrender.com/register', {
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
